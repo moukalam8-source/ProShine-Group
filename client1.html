@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Client 1 - ProShine</title>
+</head>
+
+<body>
+
+<h2>FICHE CLIENT 1</h2>
+
+<!-- 🔴 MODIFIE ICI LE NOM DU CLIENT -->
+<p><b>Nom :</b> CLIENT 1</p>
+
+<!-- 🔴 MODIFIE ICI LES INFOS FIXES -->
+<p><b>Téléphone :</b> à remplir</p>
+<p><b>Quartier :</b> à remplir</p>
+
+<hr>
+
+<h3>Services demandés</h3>
+
+<!-- 🔴 TU PEUX LAISSER OU MODIFIER LES CHOIX -->
+<label><input type="checkbox"> Nettoyage</label><br>
+<label><input type="checkbox"> Débroussaillage</label><br>
+<label><input type="checkbox"> Entretien</label><br>
+
+<hr>
+
+<h3>Infos client (modifiable par le client)</h3>
+
+<p>Nom :</p>
+<input type="text" id="nom">
+
+<p>Téléphone :</p>
+<input type="text" id="tel">
+
+<p>Quartier :</p>
+<input type="text" id="quartier">
+
+<br><br>
+<button onclick="save()">Enregistrer</button>
+
+<p id="result"></p>
+
+<script>
+function save() {
+    // 🔴 SAUVEGARDE SIMPLE (local navigateur)
+    let nom = document.getElementById("nom").value;
+    let tel = document.getElementById("tel").value;
+    let quartier = document.getElementById("quartier").value;
+
+    localStorage.setItem("nom1", nom);
+    localStorage.setItem("tel1", tel);
+    localStorage.setItem("quartier1", quartier);
+
+    document.getElementById("result").innerText = "Infos enregistrées ✔";
+}
+</script>
+
+</body>
+</html>

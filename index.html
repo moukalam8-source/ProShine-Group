@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ProShine Group</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+            padding-top: 80px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        input {
+            padding: 10px;
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>PROSHINE GROUP</h1>
+
+    <div class="box">
+
+        <p>👉 ENTRE TON CODE CLIENT</p>
+
+        <input type="text" id="code" placeholder="Ex: PRO001">
+
+        <button onclick="go()">Entrer</button>
+
+        <p style="margin-top:15px;">
+            Contact :  
+            <!-- 🔴 MODIFIE ICI TON CONTACT -->
+            WhatsApp : +242 XX XX XX XX
+        </p>
+
+    </div>
+
+    <script>
+        function go() {
+            let code = document.getElementById("code").value;
+
+            // 🔴 ICI TU PEUX AJOUTER LES CODES CLIENTS
+            if (code === "PRO001") {
+                window.location.href = "client1.html";
+            }
+
+            else if (code === "PRO002") {
+                window.location.href = "client2.html";
+            }
+
+            else if (code === "PRO003") {
+                window.location.href = "client3.html";
+            }
+
+            else {
+                alert("Code invalide");
+            }
+        }
+    </script>
+
+</body>
+</html>

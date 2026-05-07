@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Client 2 - ProShine</title>
+</head>
+
+<body>
+
+<h2>FICHE CLIENT 2</h2>
+
+<!-- 🔴 MODIFIE ICI -->
+<p><b>Nom :</b> CLIENT 2</p>
+
+<p><b>Téléphone :</b> à remplir</p>
+<p><b>Quartier :</b> à remplir</p>
+
+<hr>
+
+<h3>Services demandés</h3>
+
+<label><input type="checkbox"> Nettoyage</label><br>
+<label><input type="checkbox"> Débroussaillage</label><br>
+<label><input type="checkbox"> Entretien</label><br>
+
+<hr>
+
+<h3>Infos client</h3>
+
+<p>Nom :</p>
+<input type="text" id="nom">
+
+<p>Téléphone :</p>
+<input type="text" id="tel">
+
+<p>Quartier :</p>
+<input type="text" id="quartier">
+
+<br><br>
+<button onclick="save()">Enregistrer</button>
+
+<p id="result"></p>
+
+<script>
+function save() {
+    localStorage.setItem("nom2", document.getElementById("nom").value);
+    localStorage.setItem("tel2", document.getElementById("tel").value);
+    localStorage.setItem("quartier2", document.getElementById("quartier").value);
+
+    document.getElementById("result").innerText = "Infos enregistrées ✔";
+}
+</script>
+
+</body>
+</html>
